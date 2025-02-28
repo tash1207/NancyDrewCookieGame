@@ -16,6 +16,11 @@ public class Button : MonoBehaviour
             topping.hasBeenAdded = false;
         }
 
+        foreach (Cutout cutout in FindObjectsOfType<Cutout>())
+        {
+            cutout.hasBeenAdded = false;
+        }
+
         FindObjectOfType<Cookie>().Reset();
     }
 }

@@ -19,7 +19,7 @@ public class Topping : MonoBehaviour, IPointerDownHandler
     {
         if (!hasBeenAdded && topping != null && cookie != null)
         {
-            GameObject toppingGameObject = Instantiate(topping, cookie);
+            cookie.gameObject.GetComponent<Cookie>().AddToppingToCookie(topping);
             hasBeenAdded = true;
         }
     }

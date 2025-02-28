@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba9ad46ee4a7a7e40a49c64ba3756c43
+guid: 0a4e88682f0ba2a479ac04cddfae7b40
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,49 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BottomCookie
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a44d7d74aae39240a4d2340a14c9ea6
-      internalID: -1320496866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopCookie
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76246cb64260f3147b3a61f272caa27b
-      internalID: -1056385549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jam
+      name: Mask_Heart
       rect:
         serializedVersion: 2
         x: 0
@@ -166,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4554c4d6c1297904bb4ea0e77ab511a1
-      internalID: -1657544512
+      spriteID: 7f30c63dab1de624fb1646e901bd716e
+      internalID: 1089381322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glaze
+      name: Mask_Circle
       rect:
         serializedVersion: 2
         x: 256
@@ -187,14 +145,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413be928ec0b700459ff813b80db1215
-      internalID: 1114691683
+      spriteID: 8ebad4515df31c84a9ac34ca531e4c5c
+      internalID: -1303656014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprinkles
+      name: Mask_Star
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 255
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328fbf154fc84ce4ba28bdf30693761e
+      internalID: 1974460268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask_Teddy
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92174a615c2d5342941b7e9ec37ad70
+      internalID: 357270379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cutout_Heart
       rect:
         serializedVersion: 2
         x: 0
@@ -208,8 +208,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a0c4934517571f45b1d2da284379090
-      internalID: 504734299
+      spriteID: 3d6429beaf1ed2640b2280996cea639f
+      internalID: -1458872381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cutout_Circle
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f02d7c51fd99343be47f62154a00a1
+      internalID: 1204202093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cutout_Star
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653cfb26ab1e14646914612fe9a5d749
+      internalID: 175933572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cutout_Teddy
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7dd5c8577423a4786105aff8e762ef
+      internalID: 478697815
       vertices: []
       indices: 
       edges: []
@@ -225,11 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BottomCookie: -1320496866
-      Glaze: 1114691683
-      Jam: -1657544512
-      Sprinkles: 504734299
-      TopCookie: -1056385549
+      Cutout_Circle: 1204202093
+      Cutout_Heart: -1458872381
+      Cutout_Star: 175933572
+      Cutout_Teddy: 478697815
+      Mask_Circle: -1303656014
+      Mask_Heart: 1089381322
+      Mask_Star: 1974460268
+      Mask_Teddy: 357270379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

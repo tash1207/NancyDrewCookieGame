@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Cookie : MonoBehaviour, IPointerDownHandler
 {
+    int currentSortingOrder = 1;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Cookie clicked");
@@ -12,8 +14,9 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
 
     public void AddToppingToCookie(GameObject topping)
     {
-        Instantiate(topping, gameObject.transform);
-        // TODO: Set order in layer
+        GameObject toppingGameObject = Instantiate(topping, gameObject.transform);
+        toppingGameObject.GetComponent<SpriteRenderer>().sortingOrder = currentSortingOrder;
+        currentSortingOrder++;
     }
 
     public bool AddCutoutToCookie(GameObject cutout)
@@ -66,5 +69,6 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
         {
             Destroy(transform.GetChild(i).gameObject);
         }
+        currentSortingOrder = 1;
     }
 }

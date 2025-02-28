@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3887141327294233821, guid: 1fcd47092bf31bc45a9f126aab97ffc1, type: 3}
       propertyPath: m_Name
-      value: Glaze Variant
+      value: Glaze Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887141327294233821, guid: 1fcd47092bf31bc45a9f126aab97ffc1, type: 3}
+      propertyPath: m_TagString
+      value: GlazeGreen
       objectReference: {fileID: 0}
     - target: {fileID: 8440563337418901455, guid: 1fcd47092bf31bc45a9f126aab97ffc1, type: 3}
       propertyPath: m_Color.b

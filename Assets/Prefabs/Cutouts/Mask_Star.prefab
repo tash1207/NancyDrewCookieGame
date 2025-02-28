@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1193792637434890786}
   m_Layer: 0
   m_Name: Mask_Star
-  m_TagString: Untagged
+  m_TagString: CutoutStar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

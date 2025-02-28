@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jam Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 2449499202401383044, guid: 19b04a9b279f51449b7bd5dfc2757e76, type: 3}
+      propertyPath: m_TagString
+      value: JamOrange
+      objectReference: {fileID: 0}
     - target: {fileID: 6290001291542746376, guid: 19b04a9b279f51449b7bd5dfc2757e76, type: 3}
       propertyPath: m_Color.b
       value: 0.08627451

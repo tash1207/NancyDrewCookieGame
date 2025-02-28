@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 503832528}
   m_Layer: 0
   m_Name: Glaze
-  m_TagString: Untagged
+  m_TagString: GlazeWhite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 911357914}
   m_Layer: 0
   m_Name: MaskTeddy
-  m_TagString: Untagged
+  m_TagString: CutoutTeddy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 923975657}
   m_Layer: 0
   m_Name: Sprinkles
-  m_TagString: Untagged
+  m_TagString: SprinklesRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 969721635}
   m_Layer: 0
   m_Name: Jam
-  m_TagString: Untagged
+  m_TagString: JamPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 1472232177}
   m_Layer: 0
   m_Name: WorkingCookie
-  m_TagString: Untagged
+  m_TagString: WorkingCookie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1934,6 +1934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1486922007}
+  - component: {fileID: 1486922008}
   m_Layer: 0
   m_Name: CookieOrder
   m_TagString: Untagged
@@ -1963,6 +1964,18 @@ Transform:
   - {fileID: 923975656}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486922008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486922006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7970c5e95665d4ebaad1a764eda513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1511521742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2057,7 +2070,7 @@ GameObject:
   - component: {fileID: 1631393545}
   m_Layer: 0
   m_Name: Jam (1)
-  m_TagString: Untagged
+  m_TagString: JamYellow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2211,7 +2224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1679011915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441541975}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: Serve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1679011915
 MonoBehaviour:
   m_ObjectHideFlags: 0

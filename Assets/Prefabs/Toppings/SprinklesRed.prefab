@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 842942687077482654}
   m_Layer: 0
   m_Name: SprinklesRed
-  m_TagString: Untagged
+  m_TagString: SprinklesRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

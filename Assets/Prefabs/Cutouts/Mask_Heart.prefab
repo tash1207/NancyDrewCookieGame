@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5871753369235506641}
   m_Layer: 0
   m_Name: Mask_Heart
-  m_TagString: Untagged
+  m_TagString: CutoutHeart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

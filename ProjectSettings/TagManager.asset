@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - TopCookie
+  - WorkingCookie
+  - JamRed
+  - JamOrange
+  - JamPurple
+  - JamYellow
+  - SprinklesRed
+  - SprinklesBlue
+  - GlazeWhite
+  - GlazeGreen
+  - CutoutHeart
+  - CutoutCircle
+  - CutoutTeddy
+  - CutoutStar
   layers:
   - Default
   - TransparentFX

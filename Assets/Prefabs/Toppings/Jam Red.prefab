@@ -22,7 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5494212739728714987, guid: af733dd9b8f0dee48bf0291292f470b9, type: 3}
       propertyPath: m_Name
-      value: Jam Variant
+      value: Jam Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494212739728714987, guid: af733dd9b8f0dee48bf0291292f470b9, type: 3}
+      propertyPath: m_TagString
+      value: JamRed
       objectReference: {fileID: 0}
     - target: {fileID: 8322031776788104120, guid: af733dd9b8f0dee48bf0291292f470b9, type: 3}
       propertyPath: m_LocalPosition.x

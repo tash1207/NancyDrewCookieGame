@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Interactable : MonoBehaviour, IPointerDownHandler
+public class Topping : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] GameObject topping;
     [SerializeField] Transform cookie;
@@ -20,8 +20,7 @@ public class Interactable : MonoBehaviour, IPointerDownHandler
     {
         if (!hasBeenAdded && topping != null && cookie != null)
         {
-            GameObject toppingGameObject =
-                Instantiate(topping, cookie.position, topping.transform.rotation);
+            GameObject toppingGameObject = Instantiate(topping, cookie);
             hasBeenAdded = true;
         }
     }

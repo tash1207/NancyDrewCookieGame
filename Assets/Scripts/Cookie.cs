@@ -41,7 +41,6 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
             GameObject child = transform.GetChild(i).gameObject;
             if (child.tag == "TopCookie")
             {
-                child.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
                 return true;
             }
         }
@@ -58,8 +57,13 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
             {
                 pastTopCookieLayer = true;
             }
-            child.GetComponent<SpriteRenderer>().maskInteraction =
-                pastTopCookieLayer ? SpriteMaskInteraction.VisibleOutsideMask : SpriteMaskInteraction.VisibleInsideMask;
+            SpriteRenderer spriteRenderer = child.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.maskInteraction = pastTopCookieLayer
+                    ? SpriteMaskInteraction.VisibleOutsideMask
+                    : SpriteMaskInteraction.VisibleInsideMask;
+            }
         }
     }
 

@@ -24,7 +24,16 @@ public class Button : MonoBehaviour
         bool cookiesMatch = CheckIfCookiesMatch(workingCookie, cookieOrder);
         Debug.Log("Cookies match: " + cookiesMatch);
 
-        // TODO: Add to score and spawn new cookie
+        // TODO: Add to score
+        StartCoroutine(ResetAndSpawnCookie());
+    }
+
+    IEnumerator ResetAndSpawnCookie()
+    {
+        Reset();
+        cookieOrder.GetComponent<Cookie>().Reset();
+        yield return new WaitForEndOfFrame();
+        FindObjectOfType<CookieSpawner>().SpawnRandomCookie();
     }
 
     bool CheckIfCookiesMatch(GameObject cookie1, GameObject cookie2)

@@ -9,4 +9,12 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
     {
         Debug.Log("Cookie clicked");
     }
+
+    public void Reset()
+    {
+        for (int i = 1; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+    }
 }

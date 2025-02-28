@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 441541973}
   - component: {fileID: 441541972}
   - component: {fileID: 441541971}
+  - component: {fileID: 441541975}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -508,6 +509,18 @@ RectTransform:
   m_AnchoredPosition: {x: 6, y: 0.2}
   m_SizeDelta: {x: 5, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &441541975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441541970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c59325edac3b9047838a275e8ef952e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &465301708
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +915,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 707000389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441541975}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &707000389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,6 +2759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topping: {fileID: 6736433467216323853, guid: 6b036ef1f6919594eb71a2130a349fed, type: 3}
   cookie: {fileID: 1472232175}
+  hasBeenAdded: 0
 --- !u!1001 &480870895459356749
 PrefabInstance:
   m_ObjectHideFlags: 0

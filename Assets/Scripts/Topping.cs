@@ -8,11 +8,10 @@ public class Topping : MonoBehaviour, IPointerDownHandler
     [SerializeField] GameObject topping;
     [SerializeField] Transform cookie;
 
-    bool hasBeenAdded = false;
+    public bool hasBeenAdded = false;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Topping clicked");
         AddObjectToCookie();
     }
 

@@ -23,14 +23,17 @@ public class Button : MonoBehaviour
 
         bool cookiesMatch = CheckIfCookiesMatch(workingCookie, cookieOrder);
         Debug.Log("Cookies match: " + cookiesMatch);
+        Reset();
 
         // TODO: Add to score
-        StartCoroutine(ResetAndSpawnCookie());
+        if (cookiesMatch)
+        {
+            StartCoroutine(ResetAndSpawnCookie());
+        }
     }
 
     IEnumerator ResetAndSpawnCookie()
     {
-        Reset();
         cookieOrder.GetComponent<Cookie>().Reset();
         yield return new WaitForEndOfFrame();
         FindObjectOfType<CookieSpawner>().SpawnRandomCookie();

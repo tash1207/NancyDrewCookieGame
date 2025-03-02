@@ -9,7 +9,7 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Cookie clicked");
+        // Debug.Log("Cookie clicked");
     }
 
     public void AddToppingToCookie(GameObject topping)
@@ -29,7 +29,7 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
         }
         else
         {
-            Debug.Log("Needs top cookie first!!");
+            FindObjectOfType<UIDisplay>().ShowInfoMessage("I need a top cookie first!");
             return false;
         }
     }

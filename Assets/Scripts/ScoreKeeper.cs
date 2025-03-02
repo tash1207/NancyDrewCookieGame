@@ -5,14 +5,7 @@ using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    [SerializeField] TMP_Text scoreText;
-
     int score = 0;
-
-    void Update()
-    {
-        scoreText.text = GetScore().ToString();   
-    }
 
     public int GetScore()
     {

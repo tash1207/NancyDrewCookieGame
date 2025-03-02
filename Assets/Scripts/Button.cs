@@ -31,22 +31,25 @@ public class Button : MonoBehaviour
         }
 
         bool cookiesMatch = CheckIfCookiesMatch(workingCookie, cookieOrder);
-        Debug.Log("Cookies match: " + cookiesMatch);
         Reset();
 
         if (cookiesMatch)
         {
+            FindObjectOfType<UIDisplay>().ShowCookieSuccessMessage();
             FindObjectOfType<ScoreKeeper>().ModifyScore(pointsPerCookie);
             StartCoroutine(ResetAndSpawnCookie());
         }
         else
-        {
+        {            
             pointsPerCookie -= penaltyForWrongCookie;
             Mathf.Clamp(pointsPerCookie, 0, int.MaxValue);
             if (pointsPerCookie < 1)
             {
+                FindObjectOfType<UIDisplay>().ShowCookieFailedMessage();
                 StartCoroutine(ResetAndSpawnCookie());
+                return;
             }
+            FindObjectOfType<UIDisplay>().ShowCookieWrongMessage();
         }
     }
 

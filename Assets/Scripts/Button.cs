@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
@@ -14,6 +15,17 @@ public class Button : MonoBehaviour
     void Start()
     {
         pointsPerCookie = defaultPointsPerCookie;
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void PlayDemo()
+    {
+        Debug.Log("Coming Soon");
+        //SceneManager.LoadScene(2);
     }
 
     public void Serve()

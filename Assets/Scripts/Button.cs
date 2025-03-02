@@ -7,6 +7,15 @@ public class Button : MonoBehaviour
     GameObject workingCookie;
     GameObject cookieOrder;
 
+    int defaultPointsPerCookie = 10;
+    int penaltyForWrongCookie = 4;
+    int pointsPerCookie;
+
+    void Start()
+    {
+        pointsPerCookie = defaultPointsPerCookie;
+    }
+
     public void Serve()
     {
         foreach (Cookie cookie in FindObjectsOfType<Cookie>())
@@ -25,15 +34,25 @@ public class Button : MonoBehaviour
         Debug.Log("Cookies match: " + cookiesMatch);
         Reset();
 
-        // TODO: Add to score
         if (cookiesMatch)
         {
+            FindObjectOfType<ScoreKeeper>().ModifyScore(pointsPerCookie);
             StartCoroutine(ResetAndSpawnCookie());
+        }
+        else
+        {
+            pointsPerCookie -= penaltyForWrongCookie;
+            Mathf.Clamp(pointsPerCookie, 0, int.MaxValue);
+            if (pointsPerCookie < 1)
+            {
+                StartCoroutine(ResetAndSpawnCookie());
+            }
         }
     }
 
     IEnumerator ResetAndSpawnCookie()
     {
+        pointsPerCookie = defaultPointsPerCookie;
         cookieOrder.GetComponent<Cookie>().Reset();
         yield return new WaitForEndOfFrame();
         FindObjectOfType<CookieSpawner>().SpawnRandomCookie();

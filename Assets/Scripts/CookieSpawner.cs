@@ -110,10 +110,18 @@ public class CookieSpawner : MonoBehaviour
 
     GameObject GetUnusedObjectFromArray(GameObject[] objects, int usedIndex)
     {
-        int randomIndex = Random.Range(0, objects.Length);
-        while (randomIndex == usedIndex)
+        int randomIndex;
+        if (objects.Length == 2)
+        {
+            randomIndex = usedIndex == 0 ? 1 : 0;
+        }
+        else
         {
             randomIndex = Random.Range(0, objects.Length);
+            while (randomIndex == usedIndex)
+            {
+                randomIndex = Random.Range(0, objects.Length);
+            }   
         }
         return objects[randomIndex];
     }

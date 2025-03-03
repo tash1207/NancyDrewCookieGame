@@ -24,8 +24,12 @@ public class Button : MonoBehaviour
 
     public void PlayDemo()
     {
-        Debug.Log("Coming Soon");
-        //SceneManager.LoadScene(2);
+        SceneManager.LoadScene(2);
+    }
+
+    public void ExitDemo()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void Serve()

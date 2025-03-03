@@ -78,7 +78,7 @@ public class CookieSpawner : MonoBehaviour
             }
             if (useSprinklesAboveTopCookie && !sprinklesBeforeGlaze)
             {
-                GameObject sprinkleAboveTopCookie = sprinkles[Random.Range(0, sprinkles.Length)];
+                GameObject sprinkleAboveTopCookie = GetUnusedObjectFromArray(sprinkles, usedSprinklesIndex);
                 cookie.AddToppingToCookie(sprinkleAboveTopCookie);
             }
 

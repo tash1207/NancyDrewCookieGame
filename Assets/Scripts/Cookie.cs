@@ -5,11 +5,18 @@ using UnityEngine.EventSystems;
 
 public class Cookie : MonoBehaviour, IPointerDownHandler
 {
+    [SerializeField] bool startScreenCookie = false;
     int currentSortingOrder = 1;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        // Debug.Log("Cookie clicked");
+        if (startScreenCookie)
+        {
+            Reset();
+            CookieSpawner cookieSpawner = FindObjectOfType<CookieSpawner>();
+            cookieSpawner.SetCookie(this);
+            cookieSpawner.SpawnRandomCookie();
+        }
     }
 
     public void AddToppingToCookie(GameObject topping)

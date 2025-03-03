@@ -5,6 +5,7 @@ using UnityEngine;
 public class CookieSpawner : MonoBehaviour
 {
     [SerializeField] GameObject cookieOrder;
+    Cookie cookie;
 
     [SerializeField] GameObject[] jams;
     [SerializeField] GameObject[] sprinkles;
@@ -12,9 +13,17 @@ public class CookieSpawner : MonoBehaviour
     [SerializeField] GameObject[] cutouts;
     [SerializeField] GameObject topCookie;
 
+    public void SetCookie(Cookie value)
+    {
+        cookie = value;
+    }
+
     public void SpawnRandomCookie()
     {
-        Cookie cookie = cookieOrder.GetComponent<Cookie>();
+        if (cookie == null)
+        {
+            cookie = cookieOrder.GetComponent<Cookie>();
+        }
 
         bool useJam = GetBoolWithPercentProbability(90);
         bool useGlaze = GetBoolWithPercentProbability(80);

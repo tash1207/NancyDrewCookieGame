@@ -831,6 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474151323}
   - component: {fileID: 474151322}
+  - component: {fileID: 474151324}
   m_Layer: 0
   m_Name: CookieOrder (2)
   m_TagString: Untagged
@@ -850,6 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7970c5e95665d4ebaad1a764eda513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startScreenCookie: 1
 --- !u!4 &474151323
 Transform:
   m_ObjectHideFlags: 0
@@ -870,6 +872,27 @@ Transform:
   - {fileID: 1539503556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &474151324
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474151321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.3460994
+  m_Center: {x: 0, y: -0.10614157, z: 0}
 --- !u!1001 &477830755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1076,6 +1099,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2214865175779990999, guid: 19b04a9b279f51449b7bd5dfc2757e76, type: 3}
   m_PrefabInstance: {fileID: 523121477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &560191731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1760026483039988497, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: cookieOrder
+      value: 
+      objectReference: {fileID: 1791070874}
+    - target: {fileID: 3677127928841278984, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_Name
+      value: CookieSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070492500710699264, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce48c41353cb6c444bb81dfa8b84bf8d, type: 3}
 --- !u!1 &608314446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 904701423}
   - component: {fileID: 904701422}
+  - component: {fileID: 904701424}
   m_Layer: 0
   m_Name: CookieOrder (3)
   m_TagString: Untagged
@@ -1504,6 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7970c5e95665d4ebaad1a764eda513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startScreenCookie: 1
 --- !u!4 &904701423
 Transform:
   m_ObjectHideFlags: 0
@@ -1526,6 +1612,27 @@ Transform:
   - {fileID: 38187570}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &904701424
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904701421}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.3507159
+  m_Center: {x: -0.030326445, y: -0.12877324, z: 0}
 --- !u!1 &1100161219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589451249}
   - component: {fileID: 1589451248}
+  - component: {fileID: 1589451250}
   m_Layer: 0
   m_Name: CookieOrder (1)
   m_TagString: Untagged
@@ -2386,6 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7970c5e95665d4ebaad1a764eda513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startScreenCookie: 1
 --- !u!4 &1589451249
 Transform:
   m_ObjectHideFlags: 0
@@ -2408,6 +2517,27 @@ Transform:
   - {fileID: 417159905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1589451250
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589451247}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.3460994
+  m_Center: {x: 0, y: -0.075815514, z: 0}
 --- !u!1 &1591677827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +3051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791070876}
   - component: {fileID: 1791070875}
+  - component: {fileID: 1791070877}
   m_Layer: 0
   m_Name: CookieOrder
   m_TagString: Untagged
@@ -2940,6 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7970c5e95665d4ebaad1a764eda513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startScreenCookie: 1
 --- !u!4 &1791070876
 Transform:
   m_ObjectHideFlags: 0
@@ -2962,6 +3094,27 @@ Transform:
   - {fileID: 477830756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1791070877
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791070874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.3460996
+  m_Center: {x: 0, y: -0.045489073, z: 0}
 --- !u!1 &1907759476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,6 +3566,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1932196306}
   - {fileID: 701695682}
+  - {fileID: 560191731}
   - {fileID: 2040307169}
   - {fileID: 1791070876}
   - {fileID: 1589451249}

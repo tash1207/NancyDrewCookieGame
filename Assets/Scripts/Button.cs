@@ -8,15 +8,6 @@ public class Button : MonoBehaviour
     GameObject workingCookie;
     GameObject cookieOrder;
 
-    int defaultPointsPerCookie = 10;
-    int penaltyForWrongCookie = 4;
-    int pointsPerCookie;
-
-    void Start()
-    {
-        pointsPerCookie = defaultPointsPerCookie;
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene(1);
@@ -52,14 +43,13 @@ public class Button : MonoBehaviour
         if (cookiesMatch)
         {
             FindObjectOfType<UIDisplay>().ShowCookieSuccessMessage();
-            FindObjectOfType<ScoreKeeper>().ModifyScore(pointsPerCookie);
+            FindObjectOfType<ScoreKeeper>().RightCookie();
             StartCoroutine(ResetAndSpawnCookie());
         }
         else
         {            
-            pointsPerCookie -= penaltyForWrongCookie;
-            Mathf.Clamp(pointsPerCookie, 0, int.MaxValue);
-            if (pointsPerCookie < 1)
+            FindObjectOfType<ScoreKeeper>().WrongCookie();
+            if (FindObjectOfType<ScoreKeeper>().GetPointsPerCookie() < 1)
             {
                 FindObjectOfType<UIDisplay>().ShowCookieFailedMessage();
                 StartCoroutine(ResetAndSpawnCookie());
@@ -71,7 +61,7 @@ public class Button : MonoBehaviour
 
     IEnumerator ResetAndSpawnCookie()
     {
-        pointsPerCookie = defaultPointsPerCookie;
+        FindObjectOfType<ScoreKeeper>().ResetPointsPerCookie();
         cookieOrder.GetComponent<Cookie>().Reset();
         yield return new WaitForEndOfFrame();
         FindObjectOfType<CookieSpawner>().SpawnRandomCookie();

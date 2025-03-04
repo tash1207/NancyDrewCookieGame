@@ -65,6 +65,10 @@ public class Button : MonoBehaviour
         cookieOrder.GetComponent<Cookie>().Reset();
         yield return new WaitForEndOfFrame();
         FindObjectOfType<CookieSpawner>().SpawnRandomCookie();
+        if (FindObjectOfType<TipsManager>() != null)
+        {
+            FindObjectOfType<TipsManager>().StartTimer();
+        }
     }
 
     bool CheckIfCookiesMatch(GameObject cookie1, GameObject cookie2)

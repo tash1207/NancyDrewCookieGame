@@ -35,6 +35,12 @@ public class ScoreKeeper : MonoBehaviour
     {
         ModifyScore(pointsPerCookie);
         pointsPerCookie = defaultPointsPerCookie;
+
+        if (FindObjectOfType<TipsManager>() != null)
+        {
+            int tipPoints = FindObjectOfType<TipsManager>().GetTipPoints();
+            ModifyScore(tipPoints);
+        }
     }
 
     public void ResetPointsPerCookie()

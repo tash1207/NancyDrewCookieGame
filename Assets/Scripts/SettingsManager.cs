@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour, IPointerDownHandler
 {
@@ -37,5 +37,10 @@ public class SettingsManager : MonoBehaviour, IPointerDownHandler
         {
             FindObjectOfType<AudioSource>().Pause();
         }
+    }
+
+    public void ExitToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

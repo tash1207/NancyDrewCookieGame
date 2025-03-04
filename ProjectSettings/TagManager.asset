@@ -18,6 +18,7 @@ TagManager:
   - CutoutCircle
   - CutoutTeddy
   - CutoutStar
+  - CookieOrder
   layers:
   - Default
   - TransparentFX

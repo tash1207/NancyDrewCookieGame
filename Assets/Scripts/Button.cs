@@ -44,7 +44,7 @@ public class Button : MonoBehaviour
         {
             FindObjectOfType<UIDisplay>().ShowCookieSuccessMessage();
             FindObjectOfType<ScoreKeeper>().RightCookie();
-            StartCoroutine(ResetAndSpawnCookie());
+            FindObjectOfType<GameManager>().ResetAndSpawnCookie(cookieOrder.GetComponent<Cookie>());
         }
         else
         {            
@@ -52,22 +52,10 @@ public class Button : MonoBehaviour
             if (FindObjectOfType<ScoreKeeper>().GetPointsPerCookie() < 1)
             {
                 FindObjectOfType<UIDisplay>().ShowCookieFailedMessage();
-                StartCoroutine(ResetAndSpawnCookie());
+                FindObjectOfType<GameManager>().ResetAndSpawnCookie(cookieOrder.GetComponent<Cookie>());
                 return;
             }
             FindObjectOfType<UIDisplay>().ShowCookieWrongMessage();
-        }
-    }
-
-    IEnumerator ResetAndSpawnCookie()
-    {
-        FindObjectOfType<ScoreKeeper>().ResetPointsPerCookie();
-        cookieOrder.GetComponent<Cookie>().Reset();
-        yield return new WaitForEndOfFrame();
-        FindObjectOfType<CookieSpawner>().SpawnRandomCookie();
-        if (FindObjectOfType<TipsManager>() != null)
-        {
-            FindObjectOfType<TipsManager>().StartTimer();
         }
     }
 

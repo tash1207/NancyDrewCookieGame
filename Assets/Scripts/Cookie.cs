@@ -12,11 +12,17 @@ public class Cookie : MonoBehaviour, IPointerDownHandler
     {
         if (startScreenCookie)
         {
-            Reset();
-            CookieSpawner cookieSpawner = FindObjectOfType<CookieSpawner>();
-            cookieSpawner.SetCookie(this);
-            cookieSpawner.SpawnRandomCookie();
+            StartCoroutine(ResetAndSpawnCookie());
         }
+    }
+
+    IEnumerator ResetAndSpawnCookie()
+    {
+        Reset();
+        yield return new WaitForEndOfFrame();
+        CookieSpawner cookieSpawner = FindObjectOfType<CookieSpawner>();
+        cookieSpawner.SetCookie(this);
+        cookieSpawner.SpawnRandomCookie();
     }
 
     public void AddToppingToCookie(GameObject topping)

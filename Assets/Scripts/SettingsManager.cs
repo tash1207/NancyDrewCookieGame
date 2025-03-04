@@ -26,4 +26,16 @@ public class SettingsManager : MonoBehaviour, IPointerDownHandler
     {
         FindObjectOfType<TipsManager>().SetTipModeEnabled(enabled);
     }
+
+    public void ToggleBackgroundMusic(bool enabled)
+    {
+        if (enabled)
+        {
+            FindObjectOfType<AudioSource>().Play();
+        }
+        else
+        {
+            FindObjectOfType<AudioSource>().Pause();
+        }
+    }
 }

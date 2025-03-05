@@ -10,6 +10,12 @@ public class SettingsManager : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        ToggleSettingsMenu();
+    }
+
+    public void ToggleSettingsMenu()
+    {
+        Debug.Log("toggle menu");
         if (settingsCanvas.activeSelf)
         {
             settingsCanvas.SetActive(false);

@@ -12,15 +12,38 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        ResetToppingsAndWorkingCookie();
+        ResetCookieOrder();
+    }
+
+    public void ResetToppingsAndWorkingCookie()
+    {
+        foreach (Topping topping in FindObjectsOfType<Topping>())
+        {
+            topping.hasBeenAdded = false;
+        }
+
+        foreach (Cutout cutout in FindObjectsOfType<Cutout>())
+        {
+            cutout.hasBeenAdded = false;
+        }
+
+        foreach (Cookie cookie in FindObjectsOfType<Cookie>())
+        {
+            if (cookie.gameObject.tag == "WorkingCookie")
+            {
+                cookie.Reset();
+            }
+        }
+    }
+    
+    public void ResetCookieOrder()
+    {
         foreach (Cookie cookie in FindObjectsOfType<Cookie>())
         {
             if (cookie.gameObject.tag == "CookieOrder")
             {
                 ResetAndSpawnCookie(cookie);
-            }
-            else if (cookie.gameObject.tag == "WorkingCookie")
-            {
-                cookie.Reset();
             }
         }
     }

@@ -11,6 +11,9 @@ public class TimerManager : MonoBehaviour
     [SerializeField] GameObject gameOverCanvas;
     [SerializeField] TMP_Text gameOverScoreText;
 
+    [SerializeField] GameObject leaderboardCanvas;
+    [SerializeField] TMP_Text yourScoreText;
+
     float totalTime = 60f;
     float timeLeft;
 
@@ -77,7 +80,16 @@ public class TimerManager : MonoBehaviour
     public void PlayAgain()
     {
         gameOverCanvas.SetActive(false);
+        leaderboardCanvas.SetActive(false);
         FindObjectOfType<ScoreKeeper>().ResetScore();
         FindObjectOfType<GameManager>().StartGame();
+    }
+
+    public void ViewLeaderboard()
+    {
+        gameOverCanvas.SetActive(false);
+        yourScoreText.text = FindObjectOfType<ScoreKeeper>().GetScore().ToString();
+        FindObjectOfType<Leaderboard>().GetLeaderBoard();
+        leaderboardCanvas.SetActive(true);
     }
 }

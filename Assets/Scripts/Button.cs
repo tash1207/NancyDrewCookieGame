@@ -82,22 +82,6 @@ public class Button : MonoBehaviour
 
     public void Reset()
     {
-        foreach (Topping topping in FindObjectsOfType<Topping>())
-        {
-            topping.hasBeenAdded = false;
-        }
-
-        foreach (Cutout cutout in FindObjectsOfType<Cutout>())
-        {
-            cutout.hasBeenAdded = false;
-        }
-
-        foreach (Cookie cookie in FindObjectsOfType<Cookie>())
-        {
-            if (cookie.gameObject.tag == "WorkingCookie")
-            {
-                cookie.Reset();
-            }
-        }
+        FindObjectOfType<GameManager>().ResetToppingsAndWorkingCookie();
     }
 }

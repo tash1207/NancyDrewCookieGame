@@ -53,4 +53,10 @@ public class ScoreKeeper : MonoBehaviour
         score += amount;
         Mathf.Clamp(score, 0, int.MaxValue);
     }
+
+    public void ResetScore()
+    {
+        score = 0;
+        ResetPointsPerCookie();
+    }
 }

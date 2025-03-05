@@ -12,11 +12,12 @@ public class TipsManager : MonoBehaviour
     float timeLeft;
     int tipPoints = 10;
 
+    bool timerOn = false;
     bool tipModeEnabled = true;
 
     void Update()
     {
-        if (tipModeEnabled && timeLeft > 0)
+        if (tipModeEnabled && timerOn && timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
             UpdateTips(timeLeft);
@@ -36,8 +37,16 @@ public class TipsManager : MonoBehaviour
 
     public void StartTimer()
     {
+        timerOn = true;
         timeLeft = totalTime;
         tipPoints = 10;
+    }
+
+    public void StopTimer()
+    {
+        timerOn = false;
+        timeLeft = 0;
+        tipPoints = 0;
     }
 
     public bool IsTipModeEnabled()

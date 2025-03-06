@@ -10,6 +10,9 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] List<TMP_Text> scores;
     [SerializeField] List<TMP_Text> letters;
 
+    [SerializeField] TMP_Text yourName;
+    [SerializeField] TMP_Text yourScore;
+
     string publicKey = "f89591566e2ce0c7d409e7bfd9cf27ba1c2b751b9246d31da3cb0efb80fa415e";
 
     public void GetLeaderBoard()
@@ -21,7 +24,23 @@ public class Leaderboard : MonoBehaviour
             {
                 names[i].text = msg[i].Username;
                 scores[i].text = msg[i].Score.ToString();
+                if (msg[i].IsMine())
+                {
+                    names[i].color = Color.green;
+                    scores[i].color = Color.green;
+                }
+                else
+                {
+                    names[i].color = Color.white;
+                    scores[i].color = Color.white;
+                }
             }
+        }));
+
+        LeaderboardCreator.GetPersonalEntry(publicKey, ((msg) =>
+        {
+            yourName.text = msg.Username;
+            yourScore.text = msg.Score.ToString();
         }));
     }
 

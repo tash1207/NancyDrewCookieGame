@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
 {
+    [SerializeField] GameObject leaderboardCanvas;
+    [SerializeField] TMP_Text currentScoreText;
+
     [SerializeField] List<TMP_Text> names;
     [SerializeField] List<TMP_Text> scores;
     [SerializeField] List<TMP_Text> letters;
@@ -14,6 +17,21 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] TMP_Text yourScore;
 
     string publicKey = "f89591566e2ce0c7d409e7bfd9cf27ba1c2b751b9246d31da3cb0efb80fa415e";
+
+    public void ShowLeaderboard()
+    {
+        if (currentScoreText != null)
+        {
+            currentScoreText.text = FindObjectOfType<ScoreKeeper>().GetScore().ToString();
+        }
+        GetLeaderBoard();
+        leaderboardCanvas.SetActive(true);
+    }
+
+    public void HideLeaderboard()
+    {
+        leaderboardCanvas.SetActive(false);
+    }
 
     public void GetLeaderBoard()
     {
@@ -54,7 +72,13 @@ public class Leaderboard : MonoBehaviour
 
         if (name.Length > 0 && name != "      ")
         {
-            AddLeaderBoardEntry(name.ToUpper(), FindObjectOfType<ScoreKeeper>().GetScore());
+            int score = 0;
+            if (FindObjectOfType<ScoreKeeper>() != null)
+            {
+                score = FindObjectOfType<ScoreKeeper>().GetScore();
+            }
+
+            AddLeaderBoardEntry(name.ToUpper(), score);
         }
     }
 

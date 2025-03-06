@@ -8,9 +8,7 @@ public class Leaderboard : MonoBehaviour
 {
     [SerializeField] List<TMP_Text> names;
     [SerializeField] List<TMP_Text> scores;
-
     [SerializeField] List<TMP_Text> letters;
-    [SerializeField] TMP_InputField inputName;
 
     string publicKey = "f89591566e2ce0c7d409e7bfd9cf27ba1c2b751b9246d31da3cb0efb80fa415e";
 

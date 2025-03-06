@@ -8,6 +8,8 @@ public class Leaderboard : MonoBehaviour
 {
     [SerializeField] List<TMP_Text> names;
     [SerializeField] List<TMP_Text> scores;
+
+    [SerializeField] List<TMP_Text> letters;
     [SerializeField] TMP_InputField inputName;
 
     string publicKey = "f89591566e2ce0c7d409e7bfd9cf27ba1c2b751b9246d31da3cb0efb80fa415e";
@@ -27,9 +29,15 @@ public class Leaderboard : MonoBehaviour
 
     public void SubmitScore()
     {
-        if (inputName.text.Length > 0)
+        string name = "";
+        for (int i = 0; i < letters.Count; i++)
         {
-            AddLeaderBoardEntry(inputName.text.ToUpper(), FindObjectOfType<ScoreKeeper>().GetScore());
+            name += letters[i].text;
+        }
+
+        if (name.Length > 0 && name != "      ")
+        {
+            AddLeaderBoardEntry(name.ToUpper(), FindObjectOfType<ScoreKeeper>().GetScore());
         }
     }
 
